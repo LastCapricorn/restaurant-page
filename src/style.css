@@ -1,0 +1,15 @@
+/* @font-face {
+  font-family: '';
+  src: url();
+} */
+
+body {
+  height: 100vh;
+  background-color: #0f0004;
+  background-repeat: no-repeat;
+}
+
+header div img {
+  display: block;
+  margin: 0 auto;
+}

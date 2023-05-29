@@ -1,15 +1,117 @@
-/* @font-face {
-  font-family: '';
-  src: url();
-} */
+@font-face {
+  font-family: 'c7nazara';
+  src: url('./font/c7nazara.ttf');
+}
+@font-face {
+  font-family: 'CheveuxDange';
+  src: url('./font/Cheveuxdange.ttf');
+}
+
+:root {
+  --col01: #b49d34;
+  --col02: #ffe0ff;
+  --col03: #ef4fc0;
+  --col04: #cfffff;
+  --col05: #1fb0cf;
+  --col06: #000008;
+  --col07: #fdffaf;
+  --col08: #0000088f;
+  --col09: #000008;
+}
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+*,*::before,*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid lime; */
+}
 
 body {
   height: 100vh;
-  background-color: #0f0004;
+  background-color: var(--col06);
   background-repeat: no-repeat;
+  font-family: "CheveuxDange";
+  font-style: italic;
+  color: var(--col07);
+  font-size: 1.4rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+header {
+  background-image: url('./img/4d_burger_press_restaurant.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+header div {
+  width: 70%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 2.0rem;
+  align-items: center;
 }
 
 header div img {
-  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+header div h1 {
+  font-family: "c7nazara";
+  font-size: 3.0rem;
+  font-weight: normal;
+  text-shadow: 2px -2px 25px var(--col01),
+              -2px -2px 25px var(--col01),
+              -2px 2px 25px var(--col01),
+               2px 2px 25px var(--col01);
+  filter:drop-shadow(0px 0px 20px var(--col01));
+}
+
+nav {
+  width: 70%;
+  max-width: 1120px;
   margin: 0 auto;
+  padding-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 5.5rem);
+  column-gap: 1.0rem;
+  justify-content: end;
+}
+
+nav button {
+  font-family: 'c7nazara';
+  font-size: 1.0rem;
+  padding: 0.5rem;
+  background-color: var(--col08);
+  color: var(--col02);
+  text-shadow: 1px -1px 16px var(--col03),
+              -1px -1px 16px var(--col03),
+               1px 1px 16px var(--col03),
+              -1px -1px 16px var(--col03);
+  border: 2px groove var(--col03);
+  border-radius: 0 0.75rem;
+  transition: border-radius 500ms ease;
+  cursor: pointer;
+}
+
+nav button.active {
+  background-color: #cf2fa07f;
+}
+nav button:not(.active):hover {
+  border-radius: 0.75rem 0;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+footer {
+  flex: 0 1 auto;
 }

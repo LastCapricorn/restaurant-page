@@ -13,10 +13,12 @@
   --col03: #ef4fc0;
   --col04: #cfffff;
   --col05: #1fb0cf;
-  --col06: #000008;
   --col07: #fdffaf;
   --col08: #0000088f;
-  --col09: #000008;
+  --col09: #cf2fa07f;
+  --col10: #000f2f;
+  --col11: #000018;
+  --col12: #000008;
 }
 html {
   box-sizing: border-box;
@@ -31,14 +33,22 @@ html {
 
 body {
   height: 100vh;
-  background-color: var(--col06);
+  background-color: var(--col12);
   background-repeat: no-repeat;
   font-family: "CheveuxDange";
   font-style: italic;
   color: var(--col07);
-  font-size: 1.4rem;
   display: flex;
   flex-flow: column nowrap;
+}
+
+header div,
+nav,
+main div,
+footer div {
+  width: 85%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 header {
@@ -47,22 +57,16 @@ header {
   background-position: 50%;
   background-size: cover;
 }
-
 header div {
-  width: 70%;
-  max-width: 1120px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: min-content auto;
   column-gap: 2.0rem;
   align-items: center;
 }
-
 header div img {
   width: 200px;
   height: 200px;
 }
-
 header div h1 {
   font-family: "c7nazara";
   font-size: 3.0rem;
@@ -75,16 +79,12 @@ header div h1 {
 }
 
 nav {
-  width: 70%;
-  max-width: 1120px;
-  margin: 0 auto;
   padding-bottom: 0.5rem;
   display: grid;
   grid-template-columns: repeat(4, 5.5rem);
   column-gap: 1.0rem;
   justify-content: end;
 }
-
 nav button {
   font-family: 'c7nazara';
   font-size: 1.0rem;
@@ -100,9 +100,8 @@ nav button {
   transition: border-radius 500ms ease;
   cursor: pointer;
 }
-
 nav button.active {
-  background-color: #cf2fa07f;
+  background-color: var(--col09);
 }
 nav button:not(.active):hover {
   border-radius: 0.75rem 0;
@@ -111,7 +110,42 @@ nav button:not(.active):hover {
 main {
   flex: 1 1 auto;
 }
+main h2 {
+  font-size: 2.0rem;
+  font-weight: normal;
+  text-align: center;
+}
+main h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+}
+main p {
+  font-size: 1.1rem;
+}
 
 footer {
   flex: 0 1 auto;
+}
+footer div {
+  margin-bottom: 0.3rem;
+}
+footer div p {
+  text-align: end;
+  font-size: 0.75rem;
+}
+footer div p a {
+  display: inline-block;
+  text-underline-offset: 0.2rem;
+  transform-origin: 0% 100%;
+  transition: transform 500ms ease;
+}
+footer div p a:link {
+  color: var(--col03);
+}
+footer div p a:visited {
+  color: var(--col01);
+}
+footer div p a:hover {
+  transform: scale(1.25);
 }

@@ -1,6 +1,6 @@
 export default function home() {
   return `
-  <div>
+  <div class='home'>
     <h2>This is the damn hottest burger joint in all of Night City and beyond!</h2>
     <h3>~ We are there for you 24/7 ~</h3>
     <p>We only use the finest ingredients legally available in our burgers, so don't
@@ -18,7 +18,8 @@ export default function home() {
     <p>Warning: Microwave boxes do not belong in the hands of children.</p>
     <p>Warning: We are legally obliged to point out that autonomous microwave boxes may
       not be used as weapons!</p>
-      <p>So take a look at our menu(excerpt) and join us in Watson.</p>
+      <p>So take a look at our menu and join us in Watson.</p>
+      <p>1 Desire + 3 Dimensions === 4D Burger Press:</p>
       <p>WE PRINT YOUR PATTY!</p>
   </div>
   `

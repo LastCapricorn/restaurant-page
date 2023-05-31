@@ -1,7 +1,7 @@
 import './style.css'
 import FavIcon from './img/lc_dark_red.svg'
 import Logo from './img/4d_burger_press_logo.png'
-import home from './startpage'
+import pagelink from './pagelinker'
 
 const head = document.querySelector('head')
 const body = document.querySelector('body')
@@ -12,16 +12,13 @@ const headerContainer = document.createElement('div')
 const restaurantLogo = document.createElement('img')
 const heading = document.createElement('h1')
 const nav = document.createElement('nav')
-const homeButton = document.createElement('button')
-const menuButton = document.createElement('button')
-const contactButton = document.createElement('button')
-const creditsButton = document.createElement('button')
 const main = document.createElement('main')
 const footer = document.createElement('footer')
 const footerContainer = document.createElement('div')
 const footerPara = document.createElement('p')
 const footerAnker = document.createElement('a')
 
+const buttonTextContents = ['home', 'menu', 'contact', 'credits']
 let posX = 0
 let posY = 0
 let bgPY
@@ -39,18 +36,16 @@ heading.textContent = 'welcome at 4d burger press'
 headerContainer.appendChild(heading)
 header.appendChild(headerContainer)
 
-homeButton.textContent = 'home'
-homeButton.setAttribute('class', 'active')
-menuButton.textContent = 'menu'
-contactButton.textContent = 'contact'
-creditsButton.textContent = 'credits'
-nav.appendChild(homeButton)
-nav.appendChild(menuButton)
-nav.appendChild(contactButton)
-nav.appendChild(creditsButton)
+for (let button, i = 0; i < 4; i++) {
+  button = document.createElement('button')
+  button.textContent = buttonTextContents[i]
+  button.setAttribute('type', 'button')
+  button.setAttribute('id', buttonTextContents[i])
+  button.setAttribute('value', i)
+  button.addEventListener('click', recallPage)
+  nav.appendChild(button)
+}
 header.appendChild(nav)
-
-main.innerHTML =  home()
 
 footerPara.textContent = 'He@dcrafted 2023 by '
 footerAnker.textContent = 'Last Capricorn'
@@ -63,6 +58,14 @@ body.appendChild(header)
 body.appendChild(main)
 body.appendChild(footer)
 
+function recallPage(ev) {
+  document.querySelectorAll('nav button').forEach( btn => {
+    btn.classList.remove('active')
+  })
+  ev.target.classList.add('active')
+  main.innerHTML = pagelink(ev.target.value)()
+}
+
 document.addEventListener('pointermove', (ev) => {
   posX = ev.x
   posY = ev.y
@@ -73,3 +76,4 @@ document.addEventListener('pointermove', (ev) => {
   }`
   header.style.backgroundPositionY = `${bgPY}%`
 })
+document.getElementById('home').click()

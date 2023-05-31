@@ -1,5 +1,5 @@
 export default function home() {
-  return `
+  const homeContent = `
     <div class='home'>
       <h2>This is the damn hottest burger joint in all of Night City and beyond!</h2>
       <h3>~ We are there for you 24/7 ~</h3>
@@ -23,4 +23,6 @@ export default function home() {
         <p>WE PRINT YOUR PATTY!</p>
     </div>
   `
+
+  return homeContent
 }

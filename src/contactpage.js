@@ -1,6 +1,6 @@
 export default function contact() {
 
-  return `
+  const contactContent = `
     <div class='contact'>
       <h3>So this is where you will find us:</h3>
       <ul>address:
@@ -22,4 +22,6 @@ export default function contact() {
       <p>We would be proud to welcome you here!</p>
     </div>
   `
+
+  return contactContent
 }

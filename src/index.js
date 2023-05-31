@@ -66,6 +66,16 @@ function recallPage(ev) {
   main.innerHTML = pagelink(ev.target.value)()
 }
 
+function movePhoto(ev) {
+  if (!ev.target.classList.contains('burger')) return
+  document.querySelectorAll('.photo-container img').forEach( (photo) => {
+    photo.style.top = 58 - ev.target.dataset.scroll * 262 + 'px'
+  })
+  console.log(document.querySelector('.photo-container img:first-of-type'))
+}
+
+document.addEventListener('pointerover', movePhoto)
+
 document.addEventListener('pointermove', (ev) => {
   posX = ev.x
   posY = ev.y
@@ -76,4 +86,4 @@ document.addEventListener('pointermove', (ev) => {
   }`
   header.style.backgroundPositionY = `${bgPY}%`
 })
-document.getElementById('menu').click()
+document.getElementById('home').click()

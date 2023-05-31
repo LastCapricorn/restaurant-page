@@ -1,5 +1,5 @@
 export default function credits() {
-  return `
+  const creditsContent = `
     <div class='credits'>
       <h3>Here are a few good addresses in this city, which also supported us as
         partners:</h3>
@@ -31,4 +31,6 @@ export default function credits() {
       </ul>
     </div>
   `
+
+  return creditsContent
 }

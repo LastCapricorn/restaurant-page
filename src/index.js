@@ -76,4 +76,4 @@ document.addEventListener('pointermove', (ev) => {
   }`
   header.style.backgroundPositionY = `${bgPY}%`
 })
-document.getElementById('home').click()
+document.getElementById('menu').click()

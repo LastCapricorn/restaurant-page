@@ -69,7 +69,7 @@ export default function menu() {
           </tr>
           </table>
           <p>Each burger will be served with "Zane Jagger Style" curly fries and a
-            tin of "NiCola" or "Spunky Monkey" soft drink by choice</p>
+            tin of "NiCola" or "Spunky Monkey" soft drink by choice!</p>
         </div>
         <div class="photo-container">
           <img src='${legendary}' width='256'/>

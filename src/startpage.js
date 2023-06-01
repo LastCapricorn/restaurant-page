@@ -19,8 +19,8 @@ export default function home() {
       <p>Warning: We are legally obliged to point out that autonomous microwave boxes may
         not be used as weapons!</p>
         <p>So take a look at our menu and join us in Watson.</p>
-        <p>1 Desire + 3 Dimensions === 4D Burger Press:</p>
-        <p>WE PRINT YOUR PATTY!</p>
+        <p>1 desire + 3 dimensions === 4d burger press:</p>
+        <p>we print your patty!</p>
     </div>
   `
 
